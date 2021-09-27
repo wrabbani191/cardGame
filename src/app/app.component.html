@@ -1,0 +1,6 @@
+<label for="count">count</label>
+<input id="count" #count type="number">
+<button (click)="loadTable=true;">Load Table</button>
+<ng-container *ngIf="loadTable">
+  <app-card [count]="+count.value"></app-card>
+</ng-container>
